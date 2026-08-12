@@ -63,12 +63,21 @@
   }
 
   /* ---------- Logo mark ---------- */
-  .logo{display:flex;align-items:center;gap:10px;}
-  .logo svg{width:30px;height:30px;flex-shrink:0;}
-  .logo .wordmark{font-size:19px;font-weight:700;color:var(--navy-900);}
-  .logo .wordmark span{color:var(--blue-600);}
-  .logo--light .wordmark{color:var(--white);}
-  .logo--light .wordmark span{color:var(--blue-400);}
+.logo-image-wrap{
+  width:175px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  flex-shrink:0;
+}
+
+.logo-image{
+  width:175px;
+  height:auto;
+  max-width:none;
+  display:block;
+}
 
   /* ---------- Header ---------- */
   header{
@@ -328,15 +337,11 @@
 
 <header>
   <div class="header-inner">
-    <a href="#top" class="logo">
-      <svg viewBox="0 0 100 100" fill="none">
-        <path d="M50 8 L92 84 H8 Z" fill="#101B47"/>
-        <path d="M50 8 L71 46 L92 84 H50 Z" fill="#152258"/>
-        <path d="M8 84 H92 L79 84 C74 76 64 76 58 84 H42 C36 76 26 76 21 84 Z" fill="#F2F4F9" opacity="0.9"/>
-        <path d="M31 50 L47 68 L74 34" stroke="#2E8CFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
-      <span class="wordmark">VERTEX<span>ONE</span></span>
-    </a>
+ <a href="#top" class="logo">
+  <span class="logo-image-wrap">
+    <img src="Final_Logo.png" alt="VertexOne Consulting" class="logo-image">
+  </span>
+</a>
     <nav class="primary-nav">
       <a href="#services">Services</a>
       <a href="#about">About</a>
@@ -612,14 +617,11 @@
     <div class="footer-top">
       <div>
         <a href="#top" class="logo logo--light">
-          <svg viewBox="0 0 100 100" fill="none">
-            <path d="M50 8 L92 84 H8 Z" fill="#152258"/>
-            <path d="M50 8 L71 46 L92 84 H50 Z" fill="#1B2C6B"/>
-            <path d="M8 84 H92 L79 84 C74 76 64 76 58 84 H42 C36 76 26 76 21 84 Z" fill="#0A1130"/>
-            <path d="M31 50 L47 68 L74 34" stroke="#5FADFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          </svg>
-          <span class="wordmark">VERTEX<span>ONE</span></span>
-        </a>
+          <a href="#top" class="logo logo--light">
+  <img src="Final_Logo.png"
+       alt="VertexOne Consulting"
+       class="logo-image">
+</a>
         <p class="tag">Independent advisory for MVNOs, MNOs and MVNEs — from launch through to commercial and cost transformation.</p>
       </div>
       <div class="footer-col">
